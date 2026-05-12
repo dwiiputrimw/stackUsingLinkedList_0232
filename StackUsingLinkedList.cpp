@@ -46,4 +46,12 @@ public:
         top = top->next;
         cout << "Popped value: " << top->data << endl; 
     }
-};
+
+    // peel/top operation: Retrive the value of the topset element without removing
+    void peek()
+    {
+        if (top == NULL)
+        {
+            cout << "List is empty." << endl; 
+        }
+    };
