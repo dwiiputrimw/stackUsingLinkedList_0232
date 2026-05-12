@@ -67,5 +67,64 @@ public:
         } // return the value of the top node 
     }
 
-    //isEmpty Operaation : 
+    //isEmpty Operation : check of the stack is empty
+    bool isEmpty()
+    {
+        return top == NULL; //return true if top is null, indicating an empty stack
+    }
+};
+
+int main()
+{
+    stack stack;
+
+    int choice = 0;
+    int value;
+
+    while(choice != 5)
+    {
+        cout << "1. Push\n" << endl;
+        cout << "2. Pop\n" << endl;
+        cout << "3. Peek\n" << endl;
+        cout << "4. Exit\n" << endl;
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            cout << "Enter value to push: ";
+            cin >> value;
+            stack.push(value);
+            break;
+        case 2:
+            if (!stack.isEmpty())
+            {
+                stack.pop(); //pop the element from the stack
+            }
+            else
+            {
+                cout << "Stack is empty. Cannot pop." << endl;
+            }
+        case 3:
+            if (!stack.isEmpty())
+            {
+                stack.peek(); //get the value of the top element
+            }
+            else
+            {
+                cout << "Stack is empty. No top value." << endl;
+            }
+            break;
+
+        case 4:
+            cout << "Exiting program." <<endl; 
+            break;
+        default:
+            cout << "Invalid choice. Try again" << endl; 
+            break;
+        }
+        cout << endl; 
+    }
+    return 0;
 }
