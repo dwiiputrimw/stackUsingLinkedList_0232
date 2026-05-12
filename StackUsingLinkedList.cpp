@@ -73,3 +73,11 @@ public:
         return top == NULL; //return true if top is null, indicating an empty stack
     }
 };
+
+int main()
+{
+    stack stack;
+
+    int choice = 0;
+    int value;
+}
